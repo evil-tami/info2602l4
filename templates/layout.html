@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
   <head>
-  
+
     <!-- <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"> -->
      <!--Import Google Icon Font-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -43,20 +43,20 @@
     </nav>
 
     <div id="content" >
-    
+
       {% with messages = get_flashed_messages() %}
       {% if messages %}
-  
+
         <div  id="alert" class="blue lighten-5 col s10 offset-s1">     
           {% for message in messages %}
             <div style="font-weight: bold;text-align: center;font-size: 1.2em;margin-top: -5px;">{{ message }}</div>
           {% endfor %}
           <a href="" id="close">&times;</a>
         </div>  
-  
+
       {% endif %}
       {% endwith %}
- 
+
       {% block content %}{% endblock %}
     </div>
 
